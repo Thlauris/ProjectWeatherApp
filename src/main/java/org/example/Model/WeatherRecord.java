@@ -9,14 +9,14 @@ public class WeatherRecord {
     private double humidity;
     private LocalDateTime timestamp;
 
+    public WeatherRecord() {
+    }
+
     public WeatherRecord(String city, double temperature, double humidity, LocalDateTime timestamp) {
         this.city = city;
         this.temperature = temperature;
         this.humidity = humidity;
         this.timestamp = timestamp;
-    }
-
-    public WeatherRecord() {
     }
 
     public String getCity() {
@@ -49,5 +49,15 @@ public class WeatherRecord {
 
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "WeatherRecord{" +
+                "city='" + city + '\'' +
+                ", temperature=" + temperature +
+                ", humidity=" + humidity +
+                ", timestamp=" + timestamp +
+                '}';
     }
 }
